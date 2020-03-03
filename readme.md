@@ -1,7 +1,7 @@
 Bonobo Git Server
 ==============================================
 
-[![Build status](https://ci.appveyor.com/api/projects/status/4vyllwtb5i645lrt/branch/master?svg=true)](https://ci.appveyor.com/project/jakubgarfield/bonobo-git-server)
+This version of Bonobo Git Server uses [markdig](https://github.com/lunet-io/markdig) with the UseAdvancedExtensions for Markdown rendering, together with [github-markdown-css](https://github.com/sindresorhus/github-markdown-css). 
 
 Thank you for downloading Bonobo Git Server. For more information please visit [http://bonobogitserver.com](http://bonobogitserver.com).
 
