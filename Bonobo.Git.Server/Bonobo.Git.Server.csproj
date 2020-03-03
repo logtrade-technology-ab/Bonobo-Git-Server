@@ -562,6 +562,7 @@
     <Content Include="Content\fonts\opensans-bold.svg" />
     <Content Include="Content\fonts\opensans-light.svg" />
     <Content Include="Content\fonts\opensans-regular.svg" />
+    <Content Include="Content\github-markdown.css" />
     <Content Include="Content\images\git-logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
