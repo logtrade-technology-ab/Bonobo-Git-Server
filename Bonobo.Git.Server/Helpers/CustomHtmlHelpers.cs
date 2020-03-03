@@ -10,11 +10,14 @@ using System.Web.Routing;
 using System.Linq.Expressions;
 using Bonobo.Git.Server.Models;
 using System.ComponentModel.DataAnnotations;
+using Markdig;
 
 namespace Bonobo.Git.Server.Helpers
 {
     public static class CustomHtmlHelpers
     {
+        private static readonly MarkdownPipeline Pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
+
         public static IHtmlString AssemblyVersion(this HtmlHelper helper)
         {
             return MvcHtmlString.Create(Assembly.GetExecutingAssembly().GetName().Version.ToString());
@@ -22,7 +25,7 @@ namespace Bonobo.Git.Server.Helpers
 
         public static IHtmlString MarkdownToHtml(this HtmlHelper helper, string markdownText)
         {
-            return MvcHtmlString.Create(CommonMark.CommonMarkConverter.Convert(markdownText));
+            return MvcHtmlString.Create(Markdown.ToHtml(markdownText, Pipeline));
         }
 
         public static MvcHtmlString DisplayEnum(this HtmlHelper helper, Enum e)
